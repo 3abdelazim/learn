@@ -1,0 +1,8 @@
+helloworld:
+  build: .
+  ports:
+    - '3000:80'
+  volumes:
+    - ./src:/usr/src/app/src/
+  command: npm run dev
+  

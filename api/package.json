@@ -1,0 +1,33 @@
+{
+  "name": "hellodocker",
+  "version": "1.0.0",
+  "description": "dockerized hello world with node",
+  "main": "src/index.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "scripts": {
+		"start": "node src/index.js",
+		"dev": "./node_modules/nodemon/bin/nodemon.js src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3abdelazim/hellodocker.git"
+  },
+  "keywords": [
+    "node",
+    "docker",
+    "docker-compose",
+    "hello-world"
+  ],
+  "author": "3abdelazim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/3abdelazim/hellodocker/issues"
+  },
+  "homepage": "https://github.com/3abdelazim/hellodocker#readme"
+}

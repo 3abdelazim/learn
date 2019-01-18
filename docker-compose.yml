@@ -1,0 +1,21 @@
+api:
+  build: ./api
+  volumes:
+    - ./api/src:/usr/src/app/src/
+  command: npm run dev
+
+app:
+  build: ./helloreact
+  volumes:
+    - ./helloreact/src:/usr/src/app/src
+    - ./helloreact/public:/usr/src/app/public
+  command: npm start
+
+nginx:
+  build: ./nginx
+  ports:
+    - '80:80'
+    - '443:443'
+  links:
+    - api
+    - app
