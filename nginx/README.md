@@ -1,1 +1,1 @@
-You need to include letsencrypt and ssl folders here
+You need to include letsencrypt folder here

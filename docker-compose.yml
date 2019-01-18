@@ -5,10 +5,10 @@ api:
   command: npm run dev
 
 app:
-  build: ./helloreact
+  build: ./app
   volumes:
-    - ./helloreact/src:/usr/src/app/src
-    - ./helloreact/public:/usr/src/app/public
+    - ./app/src:/usr/src/app/src
+    - ./app/public:/usr/src/app/public
   command: npm start
 
 nginx:
