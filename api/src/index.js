@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
 
-app.get('/', (req, res) => {
-  res.send('Hello Docker & nginx!\n')
+app.get('/api', (req, res) => {
+  res.json({ text: 'Hello Docker & nginx!' })
 })
 
 app.listen(80, () => {})
