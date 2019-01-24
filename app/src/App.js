@@ -25,11 +25,11 @@ class App extends Component {
           <p>{this.state.text}</p>
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href="https://github.com/3abdelazim/learn"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Source Code
           </a>
         </header>
       </div>
