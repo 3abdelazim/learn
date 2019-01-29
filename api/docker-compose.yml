@@ -3,6 +3,7 @@ helloworld:
   ports:
     - '3000:80'
   volumes:
-    - ./src:/usr/src/app/src/
+    - './src:/usr/src/app/src/'
+    - '/usr/src/app/node_modules'
   command: npm run dev
   

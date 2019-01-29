@@ -1,40 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Header } from './Header'
+import { Home } from './Home'
+
+import './App.css'
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      text: 'fetching text...'
-    }
-  }
-
-  async componentDidMount() {
-    const response = await fetch('https://3abdelazim.com/api')
-    const responseBody = await response.json()
-    const text = responseBody.text
-    this.setState({ text })
-  }
-
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>{this.state.text}</p>
-          <a
-            className="App-link"
-            href="https://github.com/3abdelazim/learn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Source Code
-          </a>
-        </header>
+        <BrowserRouter>
+          <div>
+            <Header />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/home" component={Home} />
+              <Route path="/blog" component={Home} />
+              <Route path="/source" component={Home} />
+            </Switch>
+          </div>
+        </BrowserRouter>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
